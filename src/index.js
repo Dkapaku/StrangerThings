@@ -7,6 +7,7 @@ import './index.css'
 import Login from './components/Login.js'
 import {useState} from 'react'
 import LogOutButton from './components/LogOut.js'
+import ProfilePage from './components/Profile/Profile.js';
 import ProductForm from './components/ProductForm.js'
 const App = () => {
 const [LogIn,setLogIn]=useState(false);
@@ -24,6 +25,7 @@ const [LogIn,setLogIn]=useState(false);
 }
             <Link to="/logout">LogOut</Link>
             <Link to="/newform">Post</Link>
+            <Link to='/profile'>Profile</Link>
         </nav>
         <Routes>
             <Route path ='/' element = {<HomePage LogIn={LogIn} setLogIn={setLogIn}/>} />
@@ -31,6 +33,7 @@ const [LogIn,setLogIn]=useState(false);
             <Route path='/login' element={<Login />}/>
             <Route path='/logout' element= {<LogOutButton />}/>
             <Route path='/newform' element= {<ProductForm />}/>
+            <Route path='/profile' element={<ProfilePage />} />
         </Routes>
         
     </div>)

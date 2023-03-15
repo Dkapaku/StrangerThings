@@ -1,5 +1,3 @@
-import {useState,useEffect} from 'react'
-
 const LogOutButton =()=>{
     async function LogOut(){
         localStorage.removeItem('accountToken')
